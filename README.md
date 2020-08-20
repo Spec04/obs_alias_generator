@@ -14,7 +14,7 @@ This script performs the following function:
 ### NOTE
 This script is designed to do some of the heavy lifting of creating a YAML file to feed into [**Ben Perkins'** great work to create forward links in obsidian notes](https://github.com/perkinsben/obs_tools/tree/master/forward_linker)
 
-The intent of this script/method is to manage the alias names directly within obsidian notes, rather in a secondary document (the .yaml file)
+The intent of this script/method is to manage the alias names directly within obsidian notes, rather than in a secondary document (the .yaml file) which is a degree of separation away from the note in question.
 
 ------
 ## Requirements
