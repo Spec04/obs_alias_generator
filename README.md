@@ -28,7 +28,7 @@ pip install pyyaml
 ```
 
 ### Obsidian
-Withing your markdown note files an alias 'tag' must be added in the text to identify that the line contains aliases for the filename. This tag can be any unique string, but should be placed at the beginning of the line. 
+Within your markdown note file(s) an alias 'tag' must be added in the text to identify that the line contains aliases for the filename. This tag can be any unique string, but should be placed at the beginning of the line. 
 
 Alias tags can be any combination of characters (string), if you plan on using the tag later in the document and dont want it flagged, set the ```line_limit``` value to a small enough number before you intend to use the tag (i.e. top 10 lines). Best to avoid this and only use a unique tag.
 
