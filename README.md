@@ -37,6 +37,20 @@ I tend to use ```::::``` as it is subtle and unobtrusive and place my aliases di
 ------
 
 ## Running the code
+
+### Inputs
+The code requires the following inputs:
+* Input 0: Path to the python script
+* Input 1: Path to vault
+* Input 2: Alias search key as a string
+* Input 3: Filename for the saved YAML file
+    * Just the filename (string) without an extension
+    * e.g. ```aliases``` will create ```aliases.yml```
+* Input 4: Number of lines to limit search from top
+    * For searching the entire file input ```0``` or ```""``` 
+    * e.g. ```10``` will search only the first ```10 lines```
+    * Line limit is used to avoid searching through large notes when you know the alias tag is only always in the first few lines of the file. 
+
 ### Command line
 #### If using the guided CLI prompts:
 Run the following command in a terminal window. Python will prompt for additional inputs
@@ -51,7 +65,7 @@ python alias_creator.py {obsidian vault root} {alias key} {yaml filename} {line 
 ```
 The following would create an ```aliases.yml``` file for my ```Example_Vault``` by searching the first ```10``` lines of all files for the ```::::``` alias tag.
 ```
-python "alias_creator.py" "C:/Obsidian/Example_Vault" "::::" "aliases" "10"
+python alias_creator.py "C:/Obsidian/Example_Vault" "::::" "aliases" "10"
 ```
 
 
@@ -67,7 +81,7 @@ The following would create an ```aliases.yml``` file for my ```Example_Vault``` 
 ``` cmd
 @echo off
 python ^
-    "alias_creator.py" ^
+    alias_creator.py ^
     "C:/Obsidian/Example_Vault" ^
     "::::" ^
     "aliases" ^
@@ -80,10 +94,9 @@ pause
 While working on your note called ```Working from home.md``` you would add the alias tag ```::::``` which identifies alternative aliases for the file, and add additional aliases you wish to link this note to.
 ```md
 # Working from home
-----
 :::: Remote working, Remote worker, WFH
 
-A side effect of the ...
+A side effect of the pandemic is that ...
 ```
 Executing the script will generate the following entry into your yml alias file:
 
