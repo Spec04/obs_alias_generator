@@ -56,10 +56,8 @@ def main():
         while (line != '') and (limit == False):
             # Search for string in line
             index = line.find(search_str)
-            
-            # if (index != -1): # check for occurrence across the whole line
-            if (index == 0): # check for occurrence at the start of line only
-                
+            # check for occurrence at the start of line only
+            if (index == 0):
                 # Remove the search string from the line and split into list if multiple
                 line = line.replace(search_str,"").split(",")
                 # Remove all leading and trailing whitespaces
@@ -80,9 +78,6 @@ def main():
                 limit = True
         # Close the files
         fo.close()
-
-    # Merge list of dict to a single dict
-    # dict_file = dict(j for i in dict_file for j in i.items())
 
     # Construct the header for the Alias file
     title  = f"# {'-'*30}\n# ALIAS FILE FOR OBSIDIAN VAULT"
