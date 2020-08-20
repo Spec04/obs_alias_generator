@@ -1,11 +1,10 @@
 """
 Alias file creator for Obsidian vault.
 
-INPUT0: Path to the python script
 INPUT1: Path to vault
-INPUT2: Alias search key
+INPUT2: Alias search key/string
 INPUT3: Filename of saved YAML file
-INPUT4: Number of lines to limit search fron top (enter 0 or "" for all)
+INPUT4: Number of lines to limit search from top of note file (enter 0 or "" for all)
 """
 import os, sys
 from datetime import datetime
